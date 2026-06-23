@@ -54,9 +54,8 @@ func reverseString(s string) string {
 
 func removeLastRune(s string, num int) string {
 	runes := []rune(s)
-	if len(runes) > 0 {
-		// 最後の1文字を削除
-		runes = runes[:len(runes)-num]
+	if num <= 0 || len(runes) < num {
+		return s
 	}
-	return string(runes)
+	return string(runes[:len(runes)-num])
 }
