@@ -21,10 +21,6 @@ func Parse(text string) (map[string]interface{}, error) {
 		reading, _ := v.Reading()
 		readingHiragana := KatakanaToHiragana(reading)
 		if ContainsKanji(v.Surface) {
-			// furiganaDetails = append(furiganaDetails, map[string]interface{}{
-			// 	"text": v.Surface,
-			// 	"ruby": reading_hiragana,
-			// })
 			textAndRuby := TextAndRuby{
 				Text: v.Surface,
 				Ruby: readingHiragana,
