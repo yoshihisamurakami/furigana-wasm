@@ -3,7 +3,7 @@ module furigana-wasm
 go 1.24.13
 
 require (
-	github.com/ikawaha/kagome-dict/ipa v1.2.6
+	github.com/ikawaha/kagome-dict-ipa-neologd v0.3.2
 	github.com/ikawaha/kagome/v2 v2.11.0
 )
 

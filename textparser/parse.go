@@ -1,7 +1,7 @@
 package textparser
 
 import (
-	"github.com/ikawaha/kagome-dict/ipa"
+	ipaneologd "github.com/ikawaha/kagome-dict-ipa-neologd"
 	"github.com/ikawaha/kagome/v2/tokenizer"
 )
 
@@ -11,7 +11,7 @@ type TextAndRuby struct {
 }
 
 func Parse(text string) (map[string]interface{}, error) {
-	t, err := tokenizer.New(ipa.Dict(), tokenizer.OmitBosEos())
+	t, err := tokenizer.New(ipaneologd.Dict(), tokenizer.OmitBosEos())
 	if err != nil {
 		return nil, err
 	}

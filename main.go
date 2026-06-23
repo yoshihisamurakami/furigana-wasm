@@ -5,7 +5,7 @@ import (
 
 	textparse "furigana-wasm/textparser"
 
-	"github.com/ikawaha/kagome-dict/ipa"
+	ipaneologd "github.com/ikawaha/kagome-dict-ipa-neologd"
 )
 
 func tokenize(_ js.Value, args []js.Value) interface{} {
@@ -20,7 +20,7 @@ func tokenize(_ js.Value, args []js.Value) interface{} {
 }
 
 func registerCallbacks() {
-	_ = ipa.Dict()
+	_ = ipaneologd.Dict()
 	js.Global().Set("kagome_tokenize", js.FuncOf(tokenize))
 }
 
