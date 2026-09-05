@@ -12,8 +12,26 @@ To build the WASM file, run:
 GOOS=js GOARCH=wasm go build -o kagome.wasm .
 ```
 
-# About wasm code
-The code for wasm/kagome.wasm is available at https://github.com/yoshihisamurakami/furigana-wasm.
+## Test Command
+
+You can check how it works by running the following command:
+
+```
+$ go run ./cmd/cli/main.go '今日は日曜日です'
+{
+  "furiganaDetails": [
+    {
+      "ruby": "きょう",
+      "text": "今日"
+    },
+    {
+      "ruby": "にちようび",
+      "text": "日曜日"
+    }
+  ],
+  "originalText": "今日は日曜日です"
+}
+```
 
 ## Libraries Used
 
